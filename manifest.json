@@ -1,0 +1,25 @@
+{
+  "name": "CarbonSynqEarth — Intelligence for a Greener Future",
+  "short_name": "CarbonSynq",
+  "description": "AI-driven sustainability analytics and carbon accounting platform for the modern enterprise.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a1a12",
+  "theme_color": "#0a1a12",
+  "icons": [
+    {
+      "src": "CarbonSynq_Logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "CarbonSynq_Logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

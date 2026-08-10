@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CarbonSynqEarth — Enterprise Carbon Accounting &amp; ESG Platform</title>
+  <meta name="description" content="AI-powered carbon accounting and ESG reporting platform for enterprises. Measure Scope 1–3, automate CSRD/ISSB disclosures, and get actionable reduction insights." />
+  <meta name="theme-color" content="#0a1a12" />
+  <link rel="icon" type="image/png" href="CarbonSynq_Logo.png" />
+  <link rel="apple-touch-icon" href="CarbonSynq_Logo.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="og:title" content="CarbonSynqEarth — Enterprise Carbon Accounting &amp; ESG Platform" />
+  <meta name="og:description" content="AI-powered carbon accounting and ESG reporting platform for enterprises. Measure Scope 1–3, automate CSRD/ISSB disclosures, and get actionable reduction insights." />
+  <meta name="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'eco-green': '#16a34a',
+            'eco-dark': '#14532d',
+            'forest-deep': '#0a1a12',
+            'text-dark': '#0f172a'
+          },
+          fontFamily: {
+            sans: ['Inter', 'Arial', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="antialiased text-slate-800 bg-white selection:bg-eco-green selection:text-white">
+
+  <!-- ============================================================
+       HEADER / NAVIGATION (Mockup Strip Header from Image)
+       ============================================================ -->
+  <header class="header-mockup">
+    <div class="w-full h-full px-6 sm:px-10 lg:px-16 flex items-center justify-between">
+
+      <!-- LEFT SIDE: Logo & Name -->
+      <a href="/" class="flex items-center gap-2.5 md:gap-3 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-eco-green rounded-lg">
+        <img src="CarbonSynq_Logo.png" alt="CarbonSynqEarth logo" width="40" height="40" loading="eager"
+          class="w-9 h-9 md:w-10 md:h-10 object-contain" />
+        <span class="text-xl sm:text-2xl font-extrabold tracking-tight leading-none">
+          <span style="color:#1a2e35">CarbonSynq</span><span class="text-eco-green">Earth</span>
+        </span>
+      </a>
+
+      <!-- MIDDLE: Clean Text Menu Links -->
+      <div class="hidden md:flex flex-1 justify-center px-4">
+        <nav class="flex items-center gap-6 lg:gap-10" aria-label="Primary">
+          <!-- Solutions -->
+          <div class="dropdown-wrap" data-dropdown>
+            <button class="mockup-nav-link flex items-center gap-1" data-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+              Solutions <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a href="/solutions/net-zero" class="dropdown-item" role="menuitem">
+                <span><span class="title">Net Zero Management</span><span class="desc">Track and reduce Scope 1–3 emissions</span></span>
+                <i data-lucide="arrow-up-right" class="nav-arrow"></i>
+              </a>
+              <a href="/solutions/supply-chain" class="dropdown-item" role="menuitem">
+                <span><span class="title">Supply Chain Intelligence</span><span class="desc">Scope 3 supplier data automated</span></span>
+                <i data-lucide="arrow-up-right" class="nav-arrow"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Platform -->
+          <div class="dropdown-wrap" data-dropdown>
+            <button class="mockup-nav-link flex items-center gap-1" data-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+              Platform <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a href="/platform/pricing" class="dropdown-item" role="menuitem">
+                <span><span class="title">Features &amp; Modules</span><span class="desc">AI ingestion, audit trails &amp; APIs</span></span>
+                <i data-lucide="arrow-up-right" class="nav-arrow"></i>
+              </a>
+              <a href="/platform/pricing" class="dropdown-item" role="menuitem">
+                <span><span class="title">Pricing Plans</span><span class="desc">Flexible plans for growing enterprises</span></span>
+                <i data-lucide="arrow-up-right" class="nav-arrow"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Company -->
+          <div class="dropdown-wrap" data-dropdown>
+            <button class="mockup-nav-link flex items-center gap-1" data-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+              Company <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div class="dropdown" role="menu">
+              <a href="/about" class="dropdown-item" role="menuitem">
+                <span><span class="title">About Us</span><span class="desc">Our mission and climate conviction</span></span>
+                <i data-lucide="arrow-up-right" class="nav-arrow"></i>
+              </a>
+              <a href="/careers" class="dropdown-item" role="menuitem">
+                <span><span class="title">Careers</span><span class="desc">Join our growing engineering team</span></span>
+                <i data-lucide="arrow-up-right" class="nav-arrow"></i>
+              </a>
+              <a href="/contact" class="dropdown-item" role="menuitem">
+                <span><span class="title">Contact Us</span><span class="desc">Talk to our sustainability experts</span></span>
+                <i data-lucide="arrow-up-right" class="nav-arrow"></i>
+              </a>
+            </div>
+          </div>
+
+          <a href="/platform/pricing" class="mockup-nav-link">Pricing</a>
+        </nav>
+      </div>
+
+      <!-- RIGHT SIDE: Vertical Line + Log In + Register Pill Buttons -->
+      <div class="hidden md:flex items-center gap-4 shrink-0">
+        <div class="h-6 w-[1px] bg-slate-400/60 mr-1"></div>
+        <a href="/login" class="mockup-btn-login">Log in</a>
+        <a href="/register" class="mockup-btn-register">Register</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="menu-btn" class="md:hidden p-2.5 -mr-2 text-text-dark hover:text-eco-green transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg"
+        aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden">
+    <div class="absolute inset-0 bg-forest-deep/80 backdrop-blur-xl" data-close-menu></div>
+    <div class="relative h-full overflow-y-auto px-6 pt-5 pb-10 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between">
+          <a href="/" class="flex items-center gap-2.5">
+            <img src="CarbonSynq_Logo.png" alt="CarbonSynqEarth logo" width="36" height="36" class="w-9 h-9 object-contain" />
+            <span class="text-xl font-bold tracking-tight text-white">
+              CarbonSynq<span class="text-eco-green">Earth</span>
+            </span>
+          </a>
+          <button id="menu-close" aria-label="Close menu"
+            class="p-2.5 -mr-2 text-white/80 hover:text-white transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+        <nav class="mt-8 space-y-1" aria-label="Mobile Navigation">
+          <a href="/solutions/net-zero" class="mobile-link">Net Zero Solutions <i data-lucide="arrow-right" class="mobile-arrow"></i></a>
+          <a href="/solutions/supply-chain" class="mobile-link">Supply Chain Intelligence <i data-lucide="arrow-right" class="mobile-arrow"></i></a>
+          <a href="/platform/pricing" class="mobile-link">Platform &amp; Pricing <i data-lucide="arrow-right" class="mobile-arrow"></i></a>
+          <a href="/about" class="mobile-link">About Us <i data-lucide="arrow-right" class="mobile-arrow"></i></a>
+          <a href="/careers" class="mobile-link">Careers <i data-lucide="arrow-right" class="mobile-arrow"></i></a>
+          <a href="/contact" class="mobile-link">Contact Us <i data-lucide="arrow-right" class="mobile-arrow"></i></a>
+        </nav>
+      </div>
+
+      <div class="mt-8 grid gap-3">
+        <a href="/login" class="block text-center py-3 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 transition-colors min-h-[44px]">Log in</a>
+        <a href="/book-demo" class="btn-primary w-full text-center">Book a Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         SECTION 1 — HERO SECTION (Mockup Image Design)
+         ============================================================ -->
+    <section id="hero" class="relative min-h-screen flex flex-col justify-end overflow-hidden pt-28 pb-16 lg:pb-24">
+      <img src="Thick Forest.png" alt="Lush green forest background"
+        class="fixed top-0 left-0 w-full h-screen object-cover z-0 pointer-events-none"
+        style="filter:brightness(1.02) saturate(1.15)" loading="eager" />
+      <div class="fixed top-0 left-0 w-full h-screen bg-gradient-to-b from-forest-deep/30 via-transparent to-forest-deep/60 pointer-events-none z-0"></div>
+
+      <div class="relative w-full px-6 sm:px-12 lg:px-16 z-10">
+        <div class="grid lg:grid-cols-12 gap-8 items-end">
+
+          <!-- Left Column: Headline & Subhead -->
+          <div class="lg:col-span-8 text-left">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.12] tracking-tight hero-text-shadow">
+              <span class="hero-fade-1 inline-block">Powering a <span class="text-[#22c55e]">Greener</span></span><br />
+              <span class="hero-fade-2 inline-block"><span class="text-[#22c55e]">Future</span> With Intelligent </span><br><span> Insights</span>
+            </h1>
+            <p class="mt-6 text-base sm:text-lg md:text-xl text-white/95 leading-relaxed max-w-2xl font-medium hero-subhead-shadow hero-fade-2">
+              AI-Powered carbon accounting and ESG reporting platform for enterprises. Measure scope 1-3, automate CSRD/ISSB disclosures
+            </p>
+          </div>
+
+          <!-- Right Column: CTA Buttons -->
+          <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-row items-start lg:items-center justify-start lg:justify-end gap-4 pb-2 hero-fade-2">
+            <a href="/book-demo" class="mockup-btn-demo">
+              Book a Demo <span class="cta-arrow transition-transform duration-150 ease-out inline-block">→</span>
+            </a>
+            <a href="#how-it-works" class="mockup-btn-works">
+              See How It Works
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 2 — ABOUT / MISSION (TEXT & STATS LEFT, IMAGE RIGHT)
+         ============================================================ -->
+    <section id="about" class="relative z-10 section-padding bg-white">
+      <div class="w-full px-6 sm:px-12 lg:px-16">
+        <div class="section-divider mx-auto mb-8"></div>
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+          <!-- Left Side: All Text Matter & Stat Cards -->
+          <div class="lg:col-span-7 reveal-on-scroll">
+            <span class="badge">Our Mission</span>
+            <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold text-text-dark leading-tight tracking-tight">
+              Transforming Sustainability into a Competitive Advantage
+            </h2>
+            <p class="mt-6 text-base text-slate-600 leading-relaxed max-w-2xl">
+              The modern enterprise faces new climate expectations from investors, regulators, customers, and talent. CarbonSynqEarth turns regulatory pressure into market leadership: our AI-powered platform delivers precise, audit-ready carbon accounting so you can measure with confidence, report with speed, and act with certainty.
+            </p>
+
+            <!-- 4 Stat Cards grid placed below paragraph on the left side -->
+            <div class="mt-8 grid grid-cols-2 sm:grid-cols-2 gap-4">
+              <div class="stat-card">
+                <span class="value">100%</span>
+                <span class="label">Audit-Ready Accuracy</span>
+              </div>
+              <div class="stat-card">
+                <span class="value">AI Engine</span>
+                <span class="label">Actionable Reduction Insights</span>
+              </div>
+              <div class="stat-card">
+                <span class="value">50%</span>
+                <span class="label">Faster ESG Reporting</span>
+              </div>
+              <div class="stat-card">
+                <span class="value">1,000+</span>
+                <span class="label">Curated Climate KPIs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: High-Resolution Plant & Hands Image -->
+          <div class="lg:col-span-5 reveal-on-scroll">
+            <div class="relative overflow-hidden rounded-3xl border border-slate-200 shadow-2xl group bg-slate-100">
+              <img src="hands-plant-soil.jpg" alt="Hands holding rich soil with green plant sapling"
+                class="w-full h-full min-h-[420px] max-h-[560px] object-cover rounded-3xl transition-transform duration-700 ease-out group-hover:scale-105"
+                loading="lazy" />
+              <div class="absolute inset-0 rounded-3xl ring-1 ring-inset ring-black/10 pointer-events-none"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 3 — FIXED-PARALLAX STATS SECTION (#stats-bar)
+         ============================================================ -->
+    <section id="stats-bar" class="relative py-20 md:py-24 overflow-hidden">
+      <!-- Fixed background layer (same image as hero on desktop, fallback on mobile for iOS Safari) -->
+      <div class="absolute inset-0 -z-20 bg-cover bg-center hidden md:block bg-fixed"
+        style="background-image: url('Thick Forest.png');"></div>
+      <div class="absolute inset-0 -z-20 bg-cover bg-center md:hidden"
+        style="background-image: url('Thick Forest.png');"></div>
+
+      <!-- Dark overlay so the section still reads as a "dark bar" -->
+      <div class="absolute inset-0 -z-10 bg-forest-deep/80"></div>
+
+      <div class="relative z-10 max-w-[1300px] mx-auto px-[4%] flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-[50px] reveal-on-scroll">
+        
+        <!-- Card 1 -->
+        <div class="parallax-stat-card flex-1">
+          <div class="stat-icon-box">
+            <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+          </div>
+          <div class="stat-number text-4xl md:text-5xl" data-target="12" data-suffix="M+">0</div>
+          <div class="stat-title">Tonnes CO₂e Tracked</div>
+          <div class="stat-subtext">Across Scopes 1, 2 &amp; 3</div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="parallax-stat-card flex-1">
+          <div class="stat-icon-box">
+            <i data-lucide="zap" class="w-5 h-5"></i>
+          </div>
+          <div class="stat-number text-4xl md:text-5xl" data-target="50" data-suffix="%">0</div>
+          <div class="stat-title">Faster ESG Disclosure Cycle</div>
+          <div class="stat-subtext">vs. manual reporting</div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="parallax-stat-card flex-1">
+          <div class="stat-icon-box">
+            <i data-lucide="building-2" class="w-5 h-5"></i>
+          </div>
+          <div class="stat-number text-4xl md:text-5xl" data-target="500" data-suffix="+">0</div>
+          <div class="stat-title">Enterprise Facilities Monitored</div>
+          <div class="stat-subtext">Globally connected</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 4 — HOW IT WORKS (REFINED WITH CONNECTOR LINE & WATERMARKS)
+         ============================================================ -->
+    <section id="how-it-works" class="relative z-10 section-padding bg-white">
+      <div class="w-full px-6 sm:px-12 lg:px-16 max-w-[1400px] mx-auto">
+        <div class="section-divider mx-auto mb-8"></div>
+        
+        <div class="text-center max-w-2xl mx-auto reveal-on-scroll">
+          <span class="bg-emerald-100 border border-emerald-300 text-eco-dark font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider inline-flex items-center gap-1.5">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-eco-green"></i> Simple 3-Step Process
+          </span>
+          <h2 class="mt-6 text-3xl sm:text-4xl lg:text-5xl font-bold text-text-dark leading-tight tracking-tight">
+            How CarbonSynqEarth Works
+          </h2>
+          <p class="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed">
+            From raw operational data to verified compliance and reduction in three seamless steps.
+          </p>
+        </div>
+
+        <!-- Horizontal 3-Column Layout with Desktop Connector Line & Traveling Light -->
+        <div class="mt-16 relative step-flow-grid reveal-on-scroll">
+          
+          <!-- Dashed Connector Line behind step icons with traveling dot -->
+          <div class="hidden md:block absolute top-[2.75rem] left-[16%] right-[16%] h-[2px] z-0 pointer-events-none" aria-hidden="true">
+            <div class="w-full h-full border-t-2 border-dashed border-eco-green/40"></div>
+            <div class="connector-dot absolute -top-[3px] left-0 w-2.5 h-2.5 rounded-full bg-eco-green shadow-[0_0_8px_#22c55e]"></div>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6 lg:gap-[50px] relative z-10">
+            
+            <!-- Step 01 -->
+            <article class="step-card group">
+              <span class="step-watermark" aria-hidden="true">01</span>
+              <div>
+                <div class="step-icon-hero mb-6">
+                  <i data-lucide="cloud-upload" class="icon-upload transition-transform duration-200 ease-out" aria-hidden="true"></i>
+                </div>
+                <h3 class="text-xl font-bold text-text-dark tracking-tight text-center">Upload Your Data</h3>
+                <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed text-center">
+                  Connect ERPs, energy meters, utility bills, and fuel records — or sync directly via API for continuous data ingestion.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-semibold text-eco-dark flex items-center justify-center gap-1.5 w-full text-center">
+                <i data-lucide="file-check" class="w-4 h-4 text-eco-green"></i> Continuous Sync
+              </div>
+            </article>
+
+            <!-- Step 02 -->
+            <article class="step-card group">
+              <span class="step-watermark" aria-hidden="true">02</span>
+              <div>
+                <div class="step-icon-hero mb-6">
+                  <i data-lucide="workflow" class="icon-calculate transition-transform duration-200 ease-out" aria-hidden="true"></i>
+                </div>
+                <h3 class="text-xl font-bold text-text-dark tracking-tight text-center">Calculate Emissions</h3>
+                <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed text-center">
+                  AI matches operational activities against 85,000+ certified global emission factors for precise Scope 1, 2 &amp; 3 accounting.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-semibold text-eco-dark flex items-center justify-center gap-1.5 w-full text-center">
+                <i data-lucide="shield-check" class="w-4 h-4 text-eco-green"></i> Audit-Grade Calculations
+              </div>
+            </article>
+
+            <!-- Step 03 -->
+            <article class="step-card group">
+              <span class="step-watermark" aria-hidden="true">03</span>
+              <div>
+                <div class="step-icon-hero mb-6">
+                  <i data-lucide="line-chart" class="icon-report transition-transform duration-200 ease-out" aria-hidden="true"></i>
+                </div>
+                <h3 class="text-xl font-bold text-text-dark tracking-tight text-center">Get Reports &amp; Act</h3>
+                <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed text-center">
+                  Generate compliant disclosures while AI recommendations highlight cost-saving decarbonization pathways.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-semibold text-eco-dark flex items-center justify-center gap-1.5 w-full text-center">
+                <i data-lucide="sparkles" class="w-4 h-4 text-eco-green"></i> Strategic Decarbonization
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 5 — CORE PILLARS / OPERATING SYSTEM
+         ============================================================ -->
+    <section id="benefits" class="relative z-10 section-padding overflow-hidden bg-forest-deep">
+      <img src="Thick Forest.png" alt="" loading="lazy" aria-hidden="true"
+        class="absolute inset-0 w-full h-full object-cover opacity-35" />
+      <div class="absolute inset-0 bg-forest-deep/60"></div>
+      <div class="absolute inset-0 radial-glow" aria-hidden="true"></div>
+
+      <div class="relative w-full px-6 sm:px-12 lg:px-16">
+        <div class="section-divider mx-auto mb-8"></div>
+        <div class="text-center max-w-2xl mx-auto reveal-on-scroll">
+          <span class="badge !bg-white/10 !border-white/20 !text-emerald-100">Core Pillars</span>
+          <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
+            A Complete Operating System for Sustainability
+          </h2>
+        </div>
+
+        <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-on-scroll">
+          <article class="pillar-card">
+            <div class="pillar-icon"><i data-lucide="footprints" aria-hidden="true"></i></div>
+            <h3 class="mt-5 text-lg font-bold tracking-tight">Quantify Footprint</h3>
+            <p class="mt-3 text-sm leading-relaxed">
+              Full organizational inventory across Scopes 1, 2, and 3 with <strong class="text-emerald-300 font-semibold">audit-grade precision</strong>.
+            </p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon"><i data-lucide="shield-check" aria-hidden="true"></i></div>
+            <h3 class="mt-5 text-lg font-bold tracking-tight">Streamline Compliance</h3>
+            <p class="mt-3 text-sm leading-relaxed">
+              Board-ready disclosures aligned with <strong class="text-emerald-300 font-semibold">CSRD &amp; ISSB standards</strong> generated automatically.
+            </p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon"><i data-lucide="brain-circuit" aria-hidden="true"></i></div>
+            <h3 class="mt-5 text-lg font-bold tracking-tight">Uncover Intelligence</h3>
+            <p class="mt-3 text-sm leading-relaxed">
+              Predictive supply chain analytics uncovering inefficiencies and <strong class="text-emerald-300 font-semibold">financial opportunities</strong>.
+            </p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon"><i data-lucide="target" aria-hidden="true"></i></div>
+            <h3 class="mt-5 text-lg font-bold tracking-tight">Drive Net-Zero</h3>
+            <p class="mt-3 text-sm leading-relaxed">
+              Marginal abatement cost curves and scenario modeling turning climate commitments into <strong class="text-emerald-300 font-semibold">executable roadmaps</strong>.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 6 — VALUE DELIVERED / IMPACT & BENEFITS (RESTORED SOLID WHITE BACKGROUND)
+         ============================================================ -->
+    <section id="value-delivered" class="relative z-10 section-padding bg-white">
+      <div class="w-full px-6 sm:px-12 lg:px-16">
+        <div class="section-divider mx-auto mb-8"></div>
+        <div class="text-center max-w-2xl mx-auto reveal-on-scroll">
+          <span class="badge">Impact &amp; Benefits</span>
+          <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold text-text-dark leading-tight tracking-tight">
+            Measurable Enterprise Outcomes
+          </h2>
+          <p class="mt-4 text-base text-slate-600 leading-relaxed">
+            Delivering measurable value for leadership, sustainability, finance, and operations.
+          </p>
+        </div>
+
+        <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-on-scroll">
+          <article class="benefit-card">
+            <div class="benefit-icon"><i data-lucide="badge-dollar-sign" aria-hidden="true"></i></div>
+            <h3 class="mt-5 text-lg font-bold text-text-dark tracking-tight">Cost Efficiency</h3>
+            <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
+              Save up to <strong class="outcome-highlight">90% manual effort</strong> with automated data processing and AI verification.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon"><i data-lucide="shield-check" aria-hidden="true"></i></div>
+            <h3 class="mt-5 text-lg font-bold text-text-dark tracking-tight">Regulatory Readiness</h3>
+            <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
+              Ensure <strong class="outcome-highlight">100% audit readiness</strong> across CSRD, ISSB, SEC, and regional reporting frameworks.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon"><i data-lucide="trending-up" aria-hidden="true"></i></div>
+            <h3 class="mt-5 text-lg font-bold text-text-dark tracking-tight">Brand Reputation</h3>
+            <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
+              Demonstrate verifiable climate leadership that attracts <strong class="outcome-highlight">investors, customers, and talent</strong>.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon"><i data-lucide="zap" aria-hidden="true"></i></div>
+            <h3 class="mt-5 text-lg font-bold text-text-dark tracking-tight">Operational Agility</h3>
+            <p class="mt-2.5 text-sm text-slate-600 leading-relaxed">
+              Real-time dashboards adapt seamlessly as your enterprise facilities and global regulations evolve.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 7 — INDUSTRIES & USE CASES (DARKENED FOREST IMAGE BACKGROUND)
+         ============================================================ -->
+    <section id="use-cases" class="relative z-10 section-padding bg-forest-deep/85 backdrop-blur-md border-t border-white/10">
+      <div class="w-full px-6 sm:px-12 lg:px-16">
+        <div class="section-divider mx-auto mb-8"></div>
+        <div class="text-center max-w-2xl mx-auto reveal-on-scroll">
+          <span class="badge !bg-emerald-950/80 !border-emerald-500/40 !text-emerald-300">Industries &amp; Use Cases</span>
+          <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
+            Tailored Solutions Across Sectors
+          </h2>
+          <p class="mt-4 text-base text-slate-200 leading-relaxed">
+            Purpose-built workflows matching the carbon accounting realities of your sector.
+          </p>
+        </div>
+
+        <div class="mt-14 grid lg:grid-cols-[360px_1fr] gap-8 items-start reveal-on-scroll">
+          <!-- Sector Selector Tabs -->
+          <div class="flex flex-col gap-3 lg:sticky lg:top-28">
+            <button type="button" class="sector-btn active" data-sector="manufacturing" aria-pressed="true">
+              <span class="sector-icon"><i data-lucide="factory" aria-hidden="true"></i></span>
+              <span><span class="sector-name">Manufacturing</span><span class="sector-tagline">Plant-level precision at enterprise scale</span></span>
+            </button>
+            <button type="button" class="sector-btn" data-sector="banking" aria-pressed="false">
+              <span class="sector-icon"><i data-lucide="landmark" aria-hidden="true"></i></span>
+              <span><span class="sector-name">Banking &amp; Finance</span><span class="sector-tagline">Financed emissions, decoded</span></span>
+            </button>
+            <button type="button" class="sector-btn" data-sector="universities" aria-pressed="false">
+              <span class="sector-icon"><i data-lucide="school" aria-hidden="true"></i></span>
+              <span><span class="sector-name">Universities</span><span class="sector-tagline">Campus-wide sustainability clarity</span></span>
+            </button>
+            <button type="button" class="sector-btn" data-sector="exporters" aria-pressed="false">
+              <span class="sector-icon"><i data-lucide="globe" aria-hidden="true"></i></span>
+              <span><span class="sector-name">Exporters</span><span class="sector-tagline">Trade-ready carbon disclosures</span></span>
+            </button>
+          </div>
+
+          <!-- Sector Detail Panel -->
+          <div id="industry-panel"
+            class="bg-black/50 rounded-2xl border border-white/20 shadow-2xl p-6 md:p-10 backdrop-blur-xl text-white"
+            aria-live="polite">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 8 — ENTERPRISE ANALYTICS DASHBOARD (CHARTS)
+         ============================================================ -->
+    <section id="analytics" class="relative z-10 bg-[#010000] py-16 md:py-24" aria-label="Enterprise analytics dashboard">
+      <div class="w-full px-6 sm:px-12 lg:px-16">
+
+        <!-- Dashboard Header -->
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 py-4 border-b border-white/10">
+          <div class="flex items-center gap-3 shrink-0">
+            <svg width="32" height="32" viewBox="0 0 30 30" aria-hidden="true">
+              <rect x="1" y="1" width="28" height="28" rx="8" fill="#0F172A" />
+              <rect x="7.5" y="16" width="4" height="7" rx="1.2" fill="#22C55E" />
+              <rect x="13" y="12" width="4" height="11" rx="1.2" fill="#86EFAC" />
+              <rect x="18.5" y="7.5" width="4" height="15.5" rx="1.2" fill="#ffffff" />
+            </svg>
+            <span class="text-xl font-extrabold tracking-tight text-white">CarbonSynq<span class="text-[#86EFAC]">Analytics</span></span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="text-xs text-white/50 font-mono hidden sm:inline">GHG Protocol Standard</span>
+            <a href="/book-demo" class="inline-flex items-center text-xs font-semibold text-white bg-eco-green rounded-lg px-4 py-2 hover:bg-eco-dark transition-colors">
+              Explore Live Dashboard
+            </a>
+          </div>
+        </div>
+
+        <!-- Main Chart Card 1 — Monthly Operations & Category Breakdown (Theme Dark Card) -->
+        <div class="mt-8 rounded-2xl bg-black/50 border border-white/15 p-6 md:p-8 backdrop-blur-xl reveal-on-scroll">
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Monthly CO₂ Emissions &amp; Scope Breakdown</h3>
+              <p class="mt-1.5 text-sm sm:text-base text-white/70 font-medium">
+                Full year 2026 • Click a bar to see Scope Breakdown
+              </p>
+            </div>
+
+            <!-- Visually Linked Callout Badge -->
+            <div class="flex items-center gap-3 bg-white/5 p-2 rounded-xl border border-white/10">
+              <div class="text-right">
+                <span class="block text-[11px] text-white/60 font-medium uppercase tracking-wider">Annual Reduction</span>
+                <span class="trend-badge mt-0.5">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                  25.4% CO₂e Saved
+                </span>
+              </div>
+              <div class="flex items-center gap-0.5 rounded-lg bg-black/60 border border-white/10 p-1">
+                <button type="button" class="dash-pill" data-year="2025">2025</button>
+                <button type="button" class="dash-pill active" data-year="2026">2026</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 grid lg:grid-cols-[1.5fr_1fr] gap-10 xl:gap-14 items-center">
+            <!-- Bar Chart Component with Grid Lines (Taller height h-64 sm:h-72) -->
+            <div class="chart-scroll-wrapper">
+              <div class="min-w-[500px]">
+                <div class="flex items-end gap-2.5 sm:gap-3 h-64 sm:h-72 border-b border-white/10 pb-1 relative">
+                  <!-- Gridlines -->
+                  <div class="absolute inset-0 flex flex-col justify-between pointer-events-none stroke-white/5">
+                    <div class="border-b border-white/5 w-full h-0"></div>
+                    <div class="border-b border-white/5 w-full h-0"></div>
+                    <div class="border-b border-white/5 w-full h-0"></div>
+                    <div class="border-b border-white/5 w-full h-0"></div>
+                  </div>
+
+                  <div class="flex-1 flex flex-col items-center justify-end gap-1.5 z-10 h-full">
+                    <span class="text-[11px] font-semibold text-white/70">7.5k</span>
+                    <div class="dash-bar" data-bar data-month="Jan" data-value="7.5k tCO₂e" role="button" tabindex="0" aria-label="January, 7.5k tCO2e" style="height:93.75%"></div>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center justify-end gap-1.5 z-10 h-full">
+                    <span class="text-[11px] font-semibold text-white/70">6.8k</span>
+                    <div class="dash-bar" data-bar data-month="Feb" data-value="6.8k tCO₂e" role="button" tabindex="0" aria-label="February, 6.8k tCO2e" style="height:85%"></div>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center justify-end gap-1.5 z-10 h-full">
+                    <span class="text-[11px] font-semibold text-white/70">8k</span>
+                    <div class="dash-bar" data-bar data-month="Mar" data-value="8k tCO₂e" role="button" tabindex="0" aria-label="March, 8k tCO2e" style="height:100%"></div>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center justify-end gap-1.5 z-10 h-full">
+                    <span class="text-[11px] font-semibold text-white/70">5.8k</span>
+                    <div class="dash-bar" data-bar data-month="Apr" data-value="5.8k tCO₂e" role="button" tabindex="0" aria-label="April, 5.8k tCO2e" style="height:72.5%"></div>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center justify-end gap-1.5 z-10 h-full">
+                    <span class="text-[11px] font-semibold text-white/70">5k</span>
+                    <div class="dash-bar" data-bar data-month="May" data-value="5k tCO₂e" role="button" tabindex="0" aria-label="May, 5k tCO2e" style="height:62.5%"></div>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center justify-end gap-1.5 z-10 h-full">
+                    <span class="text-[11px] font-semibold text-white/70">4k</span>
+                    <div class="dash-bar" data-bar data-month="Jun" data-value="4k tCO₂e" role="button" tabindex="0" aria-label="June, 4k tCO2e" style="height:50%"></div>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center justify-end gap-1.5 z-10 h-full">
+                    <span class="text-[11px] font-semibold text-white/70">4.5k</span>
+                    <div class="dash-bar" data-bar data-month="Jul" data-value="4.5k tCO₂e" role="button" tabindex="0" aria-label="July, 4.5k tCO2e" style="height:56.25%"></div>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center justify-end gap-1.5 z-10 h-full">
+                    <span class="text-[11px] font-semibold text-white/70">4.3k</span>
+                    <div class="dash-bar" data-bar data-month="Aug" data-value="4.3k tCO₂e" role="button" tabindex="0" aria-label="August, 4.3k tCO2e" style="height:53.75%"></div>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center justify-end gap-1.5 z-10 h-full">
+                    <span class="text-[11px] font-semibold text-white/70">4k</span>
+                    <div class="dash-bar" data-bar data-month="Sep" data-value="4k tCO₂e" role="button" tabindex="0" aria-label="September, 4k tCO2e" style="height:50%"></div>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center justify-end gap-1.5 z-10 h-full">
+                    <span class="text-[11px] font-semibold text-white/70">3.8k</span>
+                    <div class="dash-bar" data-bar data-month="Oct" data-value="3.8k tCO₂e" role="button" tabindex="0" aria-label="October, 3.8k tCO2e" style="height:47.5%"></div>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center justify-end gap-1.5 z-10 h-full">
+                    <span class="text-[11px] font-semibold text-white/70">3.5k</span>
+                    <div class="dash-bar" data-bar data-month="Nov" data-value="3.5k tCO₂e" role="button" tabindex="0" aria-label="November, 3.5k tCO2e" style="height:43.75%"></div>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center justify-end gap-1.5 z-10 h-full">
+                    <span class="text-[11px] font-semibold text-white/70">3.2k</span>
+                    <div class="dash-bar" data-bar data-month="Dec" data-value="3.2k tCO₂e" role="button" tabindex="0" aria-label="December, 3.2k tCO2e" style="height:40%"></div>
+                  </div>
+                </div>
+                <div class="flex gap-2 mt-3" aria-hidden="true">
+                  <span class="flex-1 text-center text-xs font-medium text-white/60">Jan</span>
+                  <span class="flex-1 text-center text-xs font-medium text-white/60">Feb</span>
+                  <span class="flex-1 text-center text-xs font-medium text-white/60">Mar</span>
+                  <span class="flex-1 text-center text-xs font-medium text-white/60">Apr</span>
+                  <span class="flex-1 text-center text-xs font-medium text-white/60">May</span>
+                  <span class="flex-1 text-center text-xs font-medium text-white/60">Jun</span>
+                  <span class="flex-1 text-center text-xs font-medium text-white/60">Jul</span>
+                  <span class="flex-1 text-center text-xs font-medium text-white/60">Aug</span>
+                  <span class="flex-1 text-center text-xs font-medium text-white/60">Sep</span>
+                  <span class="flex-1 text-center text-xs font-medium text-white/60">Oct</span>
+                  <span class="flex-1 text-center text-xs font-medium text-white/60">Nov</span>
+                  <span class="flex-1 text-center text-xs font-medium text-white/60">Dec</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Donut Category Breakdown (SVG Ring + Eased Center Count-up) -->
+            <div class="flex flex-col items-center gap-8 lg:border-l lg:border-white/10 lg:pl-12">
+              <div class="relative w-40 h-40 sm:w-44 sm:h-44 shrink-0 flex items-center justify-center">
+                <svg viewBox="0 0 160 160" class="w-full h-full -rotate-90 overflow-visible">
+                  <!-- Scope 3 Segment (38%) -->
+                  <circle class="donut-segment scope-3" cx="80" cy="80" r="65" fill="none" stroke="#0F172A" stroke-width="18"
+                    stroke-dasharray="155.2 253.2" stroke-dashoffset="155.2" />
+                  <!-- Scope 2 Segment (17%) -->
+                  <circle class="donut-segment scope-2" cx="80" cy="80" r="65" fill="none" stroke="#14532D" stroke-width="18"
+                    stroke-dasharray="69.4 339.0" stroke-dashoffset="69.4" />
+                  <!-- Scope 1 Segment (45%) -->
+                  <circle class="donut-segment scope-1" cx="80" cy="80" r="65" fill="none" stroke="#22C55E" stroke-width="18"
+                    stroke-dasharray="183.8 224.6" stroke-dashoffset="183.8" />
+                </svg>
+
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="w-[72%] h-[72%] rounded-full bg-black/80 border border-white/15 flex flex-col items-center justify-center text-center p-2">
+                    <span id="donut-kicker" class="text-[10px] font-bold uppercase tracking-wider text-white/60">Avg 2026</span>
+                    <span id="donut-value" class="mt-1 text-lg sm:text-xl font-extrabold tracking-tight text-white">0%</span>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="w-full max-w-[240px] space-y-3">
+                <li class="flex items-center justify-between gap-4 text-sm">
+                  <span class="flex items-center gap-2.5 text-white/80">
+                    <span class="w-3 h-3 rounded-full bg-[#22C55E]" aria-hidden="true"></span>
+                    Scope 1 (Direct)
+                  </span>
+                  <span class="font-bold text-white">45%</span>
+                </li>
+                <li class="flex items-center justify-between gap-4 text-sm">
+                  <span class="flex items-center gap-2.5 text-white/80">
+                    <span class="w-3 h-3 rounded-full bg-[#14532D]" aria-hidden="true"></span>
+                    Scope 2 (Power)
+                  </span>
+                  <span class="font-bold text-white">17%</span>
+                </li>
+                <li class="flex items-center justify-between gap-4 text-sm">
+                  <span class="flex items-center gap-2.5 text-white/80">
+                    <span class="w-3 h-3 rounded-full bg-[#0F172A]" aria-hidden="true"></span>
+                    Scope 3 (Value Chain)
+                  </span>
+                  <span class="font-bold text-white">38%</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Chart Card 2 — Trajectory & Target Tracker (Theme Dark Card) -->
+        <div class="mt-6 rounded-2xl bg-black/50 border border-white/15 p-6 md:p-8 backdrop-blur-xl reveal-on-scroll">
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+                Net-Zero Trajectory &amp; Reduction Tracker
+              </h3>
+              <p class="mt-1.5 text-sm sm:text-base text-white/70">
+                Emissions Intensity (tCO₂e / $M Revenue) vs. SBTi Net-Zero Target
+              </p>
+            </div>
+            <span class="trend-badge"><span class="on-track-dot" aria-hidden="true"></span> SBTi 1.5°C Pathway On Track</span>
+          </div>
+
+          <div class="mt-8 chart-scroll-wrapper">
+            <div class="min-w-[650px]">
+              <svg viewBox="0 0 900 340" class="w-full h-auto line-chart-svg" role="img"
+                aria-label="Actual intensity declining from 14 to 6 tCO2e/$M against an aggressive target trajectory from 2022 to Q2 2025">
+                <defs>
+                  <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#86EFAC" stop-opacity="0.35" />
+                    <stop offset="100%" stop-color="#86EFAC" stop-opacity="0" />
+                  </linearGradient>
+                  <clipPath id="area-clip">
+                    <rect x="60" y="0" width="0" height="340" class="line-area-clip-rect" />
+                  </clipPath>
+                </defs>
+
+                <!-- Gridlines -->
+                <g stroke="rgba(255,255,255,0.07)" stroke-dasharray="4 4">
+                  <line x1="60" y1="20" x2="870" y2="20" />
+                  <line x1="60" y1="80" x2="870" y2="80" />
+                  <line x1="60" y1="140" x2="870" y2="140" />
+                  <line x1="60" y1="200" x2="870" y2="200" />
+                  <line x1="60" y1="260" x2="870" y2="260" />
+                </g>
+                <g stroke="rgba(255,255,255,0.04)">
+                  <line x1="60" y1="20" x2="60" y2="260" />
+                  <line x1="262.5" y1="20" x2="262.5" y2="260" />
+                  <line x1="465" y1="20" x2="465" y2="260" />
+                  <line x1="667.5" y1="20" x2="667.5" y2="260" />
+                  <line x1="870" y1="20" x2="870" y2="260" />
+                </g>
+
+                <line x1="60" y1="20" x2="60" y2="260" stroke="rgba(255,255,255,0.16)" />
+                <line x1="60" y1="260" x2="870" y2="260" stroke="rgba(255,255,255,0.16)" />
+
+                <!-- Area Fill Shadow (Wipes left-to-right simultaneously with green line over 3.2s) -->
+                <g clip-path="url(#area-clip)">
+                  <polygon points="60,260 60,50 262.5,80 465,102.5 667.5,140 870,170 870,260" fill="url(#areaGrad)" />
+                </g>
+
+                <!-- Main Trajectory Line (2.4s draw) -->
+                <polyline id="main-line-path" points="60,50 262.5,80 465,102.5 667.5,140 870,170" fill="none" stroke="#22C55E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" class="line-main-path" />
+
+                <!-- Target Dashed Line (1.0s fade) -->
+                <polyline points="60,57.5 262.5,83 465,116 667.5,147.5 870,162.5" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="2.5" stroke-dasharray="8 6" stroke-linecap="round" stroke-linejoin="round" class="line-target-path" />
+
+                <!-- Retimed Data Dots (20%, 40%, 60%, 80%, 100%) -->
+                <g fill="#22C55E">
+                  <circle cx="60" cy="50" r="4.5" class="line-dot dot-1" />
+                  <circle cx="262.5" cy="80" r="4.5" class="line-dot dot-2" />
+                  <circle cx="465" cy="102.5" r="4.5" class="line-dot dot-3" />
+                  <circle cx="667.5" cy="140" r="4.5" class="line-dot dot-4" />
+                  <circle cx="870" cy="170" r="4.5" class="line-dot dot-5" />
+                </g>
+                <g fill="rgba(255,255,255,0.9)">
+                  <circle cx="60" cy="57.5" r="3" />
+                  <circle cx="262.5" cy="83" r="3" />
+                  <circle cx="465" cy="116" r="3" />
+                  <circle cx="667.5" cy="147.5" r="3" />
+                  <circle cx="870" cy="162.5" r="3" />
+                </g>
+
+                <text x="68" y="44" fill="#86EFAC" font-size="12" font-weight="700">14 tCO₂e/$M</text>
+                <text x="858" y="184" fill="#86EFAC" font-size="12" font-weight="700" text-anchor="end">6 tCO₂e/$M</text>
+
+                <!-- Y-Axis Labels (tCO2e/$M Revenue) -->
+                <g fill="rgba(255,255,255,0.7)" font-size="11" font-family="Inter, Arial, sans-serif">
+                  <text x="46" y="24" text-anchor="end">16</text>
+                  <text x="46" y="84" text-anchor="end">12</text>
+                  <text x="46" y="144" text-anchor="end">8</text>
+                  <text x="46" y="204" text-anchor="end">4</text>
+                  <text x="46" y="264" text-anchor="end">0</text>
+                </g>
+
+                <!-- X-Axis Labels (Years / Quarters) -->
+                <g fill="rgba(255,255,255,0.7)" font-size="12" font-family="Inter, Arial, sans-serif">
+                  <text x="60" y="292" text-anchor="middle">2022</text>
+                  <text x="262.5" y="292" text-anchor="middle">2023</text>
+                  <text x="465" y="292" text-anchor="middle">2024</text>
+                  <text x="667.5" y="292" text-anchor="middle">Q1 2025</text>
+                  <text x="870" y="292" text-anchor="middle">Q2 2025</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+              <span class="flex items-center gap-2 text-sm text-white/70">
+                <span class="inline-block w-6 h-[3px] rounded-full bg-[#22C55E]" aria-hidden="true"></span>
+                Actual Emissions Intensity
+              </span>
+              <span class="flex items-center gap-2 text-sm text-white/70">
+                <span class="inline-block w-6 border-t-2 border-dashed border-white/70" aria-hidden="true"></span>
+                Target Net-Zero Trajectory
+              </span>
+            </div>
+            <span class="text-xs text-white/60 font-mono">
+              * Aligned with GHG Protocol Corporate Standard &amp; SBTi 1.5°C Pathway
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 9 — MILESTONE (A MILESTONE WORTH REMEMBERING)
+         ============================================================ -->
+    <section id="milestone" class="relative z-10 section-padding bg-white">
+      <div class="w-full max-w-[1400px] mx-auto px-6 sm:px-12 text-center reveal-on-scroll">
+        <div class="section-divider mx-auto mb-8"></div>
+        <span class="badge">Enterprise Milestone</span>
+        <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold text-text-dark leading-tight tracking-tight">
+          A Milestone Worth Remembering
+        </h2>
+        <p class="mt-6 text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          Together, we're turning data into action and building a more sustainable future for generations to come.
+        </p>
+
+        <figure class="mt-10">
+          <div class="milestone-img-container relative overflow-hidden rounded-3xl border border-slate-200 shadow-2xl group bg-slate-100 reveal-on-scroll">
+            <img src="milestone-banner.jpg" alt="A Milestone Worth Remembering — CarbonSynqEarth" loading="lazy"
+              class="w-full h-auto rounded-3xl object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]" />
+            <div class="absolute inset-0 rounded-3xl ring-1 ring-inset ring-black/10 pointer-events-none"></div>
+          </div>
+          <figcaption class="milestone-caption mt-4 text-xs sm:text-sm text-slate-500 leading-relaxed reveal-on-scroll">
+            CarbonSynqEarth Milestone • Measure. Reduce. Impact.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 10 — FAQ (DARKENED FOREST IMAGE BACKGROUND)
+         ============================================================ -->
+    <section id="faq" class="relative z-10 section-padding bg-forest-deep/85 backdrop-blur-md border-t border-white/10">
+      <div class="w-full max-w-[1400px] mx-auto px-6 sm:px-12">
+        <div class="section-divider mx-auto mb-8"></div>
+        <div class="text-center max-w-2xl mx-auto reveal-on-scroll">
+          <span class="badge !bg-emerald-950/80 !border-emerald-500/40 !text-emerald-300">FAQ</span>
+          <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
+            Frequently Asked Questions
+          </h2>
+          <p class="mt-4 text-base text-slate-200 leading-relaxed">
+            Everything you need to know about security, methodology, data ingestion, and deployment.
+          </p>
+        </div>
+
+        <div class="mt-12 space-y-4 reveal-on-scroll">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How is our enterprise data secured and isolated?</span>
+              <i data-lucide="chevron-down" class="faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Security is foundational to CarbonSynqEarth. All customer data is encrypted in transit with TLS 1.3 and at rest with AES-256 encryption. We enforce single sign-on (SSO), role-based access control (RBAC), and detailed audit logs. We are SOC 2 Type II certified and GDPR compliant. Your operational data is never shared or used to train public AI models.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is CarbonSynqEarth built for enterprise multi-facility rollouts?</span>
+              <i data-lucide="chevron-down" class="faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. CarbonSynqEarth is architected specifically for multi-entity, multi-plant, and multi-country organizations. The platform consolidates emissions across hundreds of facilities into a single corporate view, while granting local managers plant-level operational dashboards.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Which regulatory standards and reporting frameworks are supported?</span>
+              <i data-lucide="chevron-down" class="faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                CarbonSynqEarth supports CSRD (ESRS), ISSB (IFRS S2), SEC climate rules, CDP, TCFD, and regional requirements such as BRSR in India and CBAM for European exports. Emission factor sets are region-aware and continuously updated.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How long does implementation take?</span>
+              <i data-lucide="chevron-down" class="faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Most enterprise clients are live within 2 to 4 weeks. Guided onboarding includes ERP data mapping, automated utility bill parsing setup, and initial inventory verification by our team of sustainability engineers.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER (STRUCTURED 4-COLUMN B2B LAYOUT)
+       ============================================================ -->
+  <footer class="relative z-10 bg-[#f8fafc] border-t border-slate-200 py-16 lg:py-20">
+    <div class="w-full px-6 sm:px-12 lg:px-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
+
+        <!-- Column 1: Brand & Overview (Spans 2 cols on lg) -->
+        <div class="lg:col-span-2">
+          <a href="/" class="flex items-center gap-2.5">
+            <img src="CarbonSynq_Logo.png" alt="CarbonSynqEarth logo" width="36" height="36" loading="lazy"
+              class="w-9 h-9 object-contain" />
+            <span class="text-xl font-bold tracking-tight">
+              <span style="color:#1a2e35">CarbonSynq</span><span class="text-eco-green">Earth</span>
+            </span>
+          </a>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed max-w-sm">
+            AI-powered carbon accounting and ESG intelligence platform enabling enterprises to measure, report, and reduce emissions with audit-grade confidence.
+          </p>
+
+          <div class="mt-6 flex items-center gap-3">
+            <a href="https://www.linkedin.com/company/carbonsync-india" target="_blank" rel="noopener noreferrer"
+              class="social-btn" aria-label="CarbonSynq on LinkedIn">
+              <i data-lucide="linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://x.com/CarbonSynq11" target="_blank" rel="noopener noreferrer"
+              class="social-btn" aria-label="CarbonSynq on X">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Solutions -->
+        <nav aria-label="Footer Solutions">
+          <h3 class="text-xs font-bold uppercase tracking-widest text-slate-900">Solutions</h3>
+          <ul class="mt-4 space-y-3">
+            <li><a href="/solutions/net-zero" class="footer-link">Net Zero Management</a></li>
+            <li><a href="/solutions/supply-chain" class="footer-link">Supply Chain Scope 3</a></li>
+            <li><a href="/solutions/product-footprint" class="footer-link">Product Carbon Footprints</a></li>
+            <li><a href="/solutions/csrd-issb" class="footer-link">CSRD &amp; ISSB Disclosures</a></li>
+          </ul>
+        </nav>
+
+        <!-- Column 3: Platform -->
+        <nav aria-label="Footer Platform">
+          <h3 class="text-xs font-bold uppercase tracking-widest text-slate-900">Platform</h3>
+          <ul class="mt-4 space-y-3">
+            <li><a href="/platform/features" class="footer-link">AI Emission Engine</a></li>
+            <li><a href="/platform/pricing" class="footer-link">Enterprise Pricing</a></li>
+            <li><a href="/platform/integrations" class="footer-link">ERP &amp; API Integrations</a></li>
+            <li><a href="/platform/security" class="footer-link">Security &amp; Compliance</a></li>
+          </ul>
+        </nav>
+
+        <!-- Column 4: Company & Legal -->
+        <nav aria-label="Footer Company">
+          <h3 class="text-xs font-bold uppercase tracking-widest text-slate-900">Company</h3>
+          <ul class="mt-4 space-y-3">
+            <li><a href="/about" class="footer-link">About Us</a></li>
+            <li><a href="/careers" class="footer-link">Careers</a></li>
+            <li><a href="/contact" class="footer-link">Contact Sales</a></li>
+            <li><a href="/privacy-policy" class="footer-link">Privacy Policy</a></li>
+            <li><a href="/terms-of-service" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="mt-16 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-slate-500">&copy; 2026 CarbonSynq Pvt. Ltd. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="/privacy-policy" class="text-xs text-slate-500 hover:text-eco-green transition-colors">Privacy</a>
+          <a href="/terms-of-service" class="text-xs text-slate-500 hover:text-eco-green transition-colors">Terms</a>
+          <a href="/data-processing-agreement" class="text-xs text-slate-500 hover:text-eco-green transition-colors">DPA</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
